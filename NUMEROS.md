@@ -11,6 +11,7 @@
 | Espresso | $55 | $8 | ~86% | |
 | Anillo plata .925 (China, corregido) | $950 | $400-480 | **50-58%** | La auditoría tumbó el FOB de $8 USD: solo el metal de un anillo de 5-8 g cuesta $165-265 (plata ~$65 USD/oz, ~33 MXN/g en .925). FOB realista $15-18 USD + arancel 25% + IVA + flete |
 | Cadena plata .925 (~12 g) | $2,200 | $780 | ~65% | |
+| Anillo/cadena de ACERO inoxidable 316L | $450-650 | $40-90 | **~85%** | Línea de entrada (dato nuevo de André 18-ago: la colección también lleva acero). Benchmark: Vitaly vende acero a $50-150 USD; FOB típico $2-5 USD. Estimación propia, cotizar |
 | Osito coleccionable | $499 | $150 | ~70% | SUPUESTO propio, sin fuente de costos de peluche custom |
 
 **Regla derivada del superciclo de plata:** markup mínimo 3.5-4x sobre landed y cotizar el metal en vivo en cada pedido.
@@ -71,7 +72,7 @@
 1. **El attach cafetería→joyería (4%) es el supuesto más frágil y no tiene dato público.** → Validar en pop-up/bazar ANTES de firmar renta (Fases 1-2 de `LANZAMIENTO.md`).
 2. **Renta = ~18% de ventas base, el doble de la regla JLL (5-10%).** → No firmar en 2026; negociar post-Mundial; 60-90 m², no 120.
 3. **Escasez de matcha** (subasta de tencha ~2x 2025→2026; importación MX +20%). → Contrato anual con proveedor + origen no japonés (coreano) de cobertura.
-4. **Superciclo de plata** (~$65 USD/oz, 2.2x vs 2025). → Markup ≥3.5x y precios revisables por drop.
+4. **Superciclo de plata** (~$65 USD/oz, 2.2x vs 2025). → Markup ≥3.5x, precios revisables por drop, y la **línea de acero como cobertura natural**: si la plata sigue subiendo, el acero sostiene el precio de entrada y el margen blended.
 5. **Arancel 2026 a importaciones sin tratado (hasta 25% + IVA).** → Confirmar fracción con agente aduanal antes del primer pedido; Taxco como plan B.
 6. **Saturación: 179 cafeterías y 8+ matcha bars en la zona.** → La joyería es el corazón; el matcha es la puerta (modelo Kith Treats / Gentle Monster).
 

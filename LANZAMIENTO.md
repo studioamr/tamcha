@@ -5,7 +5,7 @@
 ## La tesis (por qué sí puede funcionar)
 
 1. **El matcha solo ya NO diferencia.** Roma Norte tiene 8+ matcha bars (SAN, Matcha Mío, Boicot, HEMA, La Macaria...) y ~179 cafeterías. Competir como "otra cafetería de matcha" es entrar en la parte roja del océano.
-2. **El espacio "joyería streetwear de plata" en México está VACÍO.** Los jugadores reales son diseño de autor caro (Sangre de mi Sangre, TANE) o plata genérica online (Prata desde $199). Nadie es el "TwoJeys mexicano".
+2. **El espacio "joyería streetwear" en México está VACÍO** (plata Y acero: nadie es el TwoJeys/Vitaly mexicano). Los jugadores reales son diseño de autor caro (Sangre de mi Sangre, TANE) o plata genérica online (Prata desde $199). Nadie es el "TwoJeys mexicano".
 3. **El híbrido es el foso.** No se encontró ningún concepto joyería+café operando en CDMX. Los precedentes mundiales funcionan: Kith Treats (10+ años), Gentle Monster/Nudake, Tiffany Blue Box Café, The Room (Seúl), y hasta Chrome Hearts tiene café dentro de su boutique de Miami. El café paga el branding y alarga la visita; la joyería paga la renta.
 
 ## Fase 0 · Marca lista (ahora → 4 semanas)
@@ -13,7 +13,7 @@
 - [x] Landing viva con estética definida → **studioamr.github.io/tamcha**
 - [ ] **Validar "TAMCHA" en IMPI** (clases 14 joyería, 43 servicios de alimentos) ANTES de invertir en inventario. Igual que la regla de MONSTER KEBABS.
 - [ ] Asegurar @handle en IG y TikTok + llenar `CONFIG` de la landing (WhatsApp Business, IG, correo).
-- [ ] Pedir **muestras** a 3-5 proveedores de plata .925 (Alibaba/1688) + cotizar 2-3 talleres de Taxco como plan B nacional. Meta: 10-15 modelos, 30-60 piezas totales. Con la plata en superciclo (~$33 MXN/g en ley .925), pesar cada pieza y costear por gramo.
+- [ ] Pedir **muestras** a 3-5 proveedores (Alibaba/1688) en DOS materiales: plata .925 (premium) y acero inoxidable 316L (entrada, modelo Vitaly) + cotizar 2-3 talleres de Taxco como plan B nacional. Meta: 10-15 modelos, 30-60 piezas totales. Con la plata en superciclo (~$33 MXN/g en ley .925), pesar cada pieza y costear por gramo; el acero casi no mueve el costo y protege el margen.
 - [ ] Sesión de fotos estilo deck (negro mate, piedra volcánica) con las muestras reales. Nada de renders.
 
 ## Fase 1 · Validación en frío (mes 1-3) — presupuesto ~$40-80k MXN
