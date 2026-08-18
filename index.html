@@ -63,6 +63,19 @@ section{position:relative;padding:clamp(90px,14vh,160px) 0}
   background:linear-gradient(180deg,rgba(230,221,203,.9),rgba(230,221,203,.35));
 }
 
+/* ---------- imágenes ---------- */
+.banda{margin:0;padding:0}
+.banda img{width:100%;max-height:72vh;object-fit:cover;display:block}
+.banda figcaption{padding:14px clamp(20px,4vw,48px);text-align:center}
+#mundos .mundo .foto{margin:-1px -1px 22px;overflow:hidden}
+#mundos .mundo .foto img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.16,1,.3,1)}
+#mundos .mundo:hover .foto img{transform:scale(1.04)}
+.mini{width:84px;height:84px;object-fit:cover;display:block}
+#plata .macro img{width:100%;height:100%;min-height:340px;object-fit:cover;display:block}
+#roma .calle{margin:clamp(36px,5vh,60px) 0 0}
+#roma .calle img{width:100%;max-height:56vh;object-fit:cover;display:block}
+#roma .calle figcaption{padding-top:12px}
+
 /* ---------- header ---------- */
 header{
   position:fixed;top:0;left:0;right:0;z-index:50;
@@ -167,7 +180,7 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--hueso);outline-offs
 
 /* ---------- líneas de producto ---------- */
 #lineas .fila{
-  display:grid;grid-template-columns:70px 1fr auto;align-items:baseline;gap:20px;
+  display:grid;grid-template-columns:56px 84px 1fr auto;align-items:center;gap:20px;
   padding:clamp(26px,3.5vh,38px) 0;border-bottom:1px solid var(--linea);
   transition:padding-left .4s cubic-bezier(.16,1,.3,1);
 }
@@ -182,8 +195,9 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--hueso);outline-offs
 #lineas .fila .chispa{opacity:0;transition:opacity .4s;color:var(--hueso);margin-left:10px}
 #lineas .fila:hover .chispa{opacity:1}
 @media(max-width:760px){
-  #lineas .fila{grid-template-columns:44px 1fr}
-  #lineas .fila p{grid-column:2;text-align:left;max-width:none}
+  #lineas .fila{grid-template-columns:34px 64px 1fr}
+  #lineas .fila p{grid-column:3;text-align:left;max-width:none}
+  .mini{width:64px;height:64px}
 }
 
 /* ---------- plata ---------- */
@@ -312,21 +326,29 @@ footer p{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(-
   </div>
 </section>
 
+<figure class="banda rev">
+  <img src="img/interior-vitrinas.jpg" alt="Interior TAMCHA: vitrinas de joyería, barra de café y osito coleccionable" loading="lazy">
+  <figcaption class="etiqueta">El espacio ✦ render conceptual</figcaption>
+</figure>
+
 <section id="mundos">
   <div class="wrap">
     <p class="etiqueta rev">Nuestra propuesta</p>
     <div class="grid">
       <article class="mundo rev">
+        <div class="foto"><img src="img/taza-osito-barra.jpg" alt="Vaso TAMCHA con osito coleccionable en barra de acero" loading="lazy"></div>
         <p class="num">01</p>
         <h3>COFFEE</h3>
         <p>Café de especialidad y matcha ceremonial. Bebidas pensadas para sorprender y conectar, servidas en un espacio que invita a quedarse.</p>
       </article>
       <article class="mundo rev">
+        <div class="foto"><img src="img/linea-joyeria.jpg" alt="Anillos y cadena de plata .925 sobre piedra volcánica" loading="lazy"></div>
         <p class="num">02</p>
         <h3>JEWELRY</h3>
         <p>Plata .925 con actitud urbana. Piezas curadas con identidad propia: anillos, cadenas y pulseras diseñadas para durar.</p>
       </article>
       <article class="mundo rev">
+        <div class="foto"><img src="img/fachada-noche.jpg" alt="Fachada nocturna TAMCHA en piedra negra" loading="lazy"></div>
         <p class="num">03</p>
         <h3>SPACE</h3>
         <p>Minimalismo brutalista: acero, concreto y luz precisa. Un espacio íntimo, atemporal y sensorial donde cada visita es una forma de expresión.</p>
@@ -340,26 +362,31 @@ footer p{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(-
     <p class="etiqueta rev" style="margin-bottom:clamp(36px,5vh,60px)">Líneas iniciales</p>
     <div class="fila rev">
       <span class="n">01</span>
+      <img class="mini" src="img/linea-joyeria.jpg" alt="Anillos y cadena de plata" loading="lazy">
       <h3>Joyería<span class="chispa">✦</span></h3>
       <p>Piezas de plata .925 diseñadas para durar.</p>
     </div>
     <div class="fila rev">
       <span class="n">02</span>
+      <img class="mini" src="img/linea-bebidas.jpg" alt="Vaso TAMCHA con osito" loading="lazy">
       <h3>Bebidas<span class="chispa">✦</span></h3>
       <p>Pensadas para sorprender y conectar.</p>
     </div>
     <div class="fila rev">
       <span class="n">03</span>
+      <img class="mini" src="img/linea-accesorios.jpg" alt="Tarjetero y llavero TAMCHA" loading="lazy">
       <h3>Accesorios<span class="chispa">✦</span></h3>
       <p>Detalles que complementan tu estilo y tu día a día.</p>
     </div>
     <div class="fila rev">
       <span class="n">04</span>
+      <img class="mini" src="img/linea-coleccionables.jpg" alt="Osito TAMCHA en caja negra" loading="lazy">
       <h3>Coleccionables<span class="chispa">✦</span></h3>
       <p>Ediciones limitadas que hacen cada visita única.</p>
     </div>
     <div class="fila rev">
       <span class="n">05</span>
+      <img class="mini" src="img/linea-merch.jpg" alt="Tote, gorra y playera TAMCHA" loading="lazy">
       <h3>Merchandising<span class="chispa">✦</span></h3>
       <p>Diseños exclusivos para llevar TAMCHA contigo.</p>
     </div>
@@ -373,6 +400,7 @@ footer p{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(-
       <p class="rev">La colección estará compuesta por piezas de plata .925 cuidadosamente seleccionadas con proveedores especializados.</p>
       <p class="rev">Nuestro valor no está únicamente en la fabricación, sino en la <b>curaduría</b>, la <b>identidad de marca</b> y la <b>experiencia de compra</b>. Jewelry is an attitude.</p>
     </div>
+    <div class="macro rev"><img src="img/taza-negra-osito.jpg" alt="Taza negra TAMCHA con osito sobre mármol" loading="lazy"></div>
   </div>
 </section>
 
@@ -395,6 +423,10 @@ footer p{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(-
     <p class="etiqueta rev">Nuestra primera flagship ✦</p>
     <h2 class="grande rev">Roma Norte</h2>
     <p class="rev" style="color:var(--hueso-dim);max-width:36em;font-size:15px">Uno de los barrios con mayor afinidad hacia conceptos que combinan diseño, gastronomía y experiencias de marca en la Ciudad de México.</p>
+    <figure class="calle rev">
+      <img src="img/fachada-roma.jpg" alt="Esquina arbolada de Roma Norte con local TAMCHA" loading="lazy">
+      <figcaption class="etiqueta">Render conceptual · esquina Roma Norte</figcaption>
+    </figure>
     <div class="razones">
       <div class="razon rev"><h4>Diseño y creatividad</h4><p>Uno de los principales distritos creativos de la ciudad: arquitectura, galerías, estudios y marcas independientes.</p></div>
       <div class="razon rev"><h4>Consumidor ideal</h4><p>Público que busca nuevas propuestas, valora el diseño y paga por experiencias diferenciadas.</p></div>
@@ -405,6 +437,11 @@ footer p{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(-
     <p class="cita rev">“No elegimos Roma Norte por la ubicación. La elegimos porque comparte la misma filosofía que queremos construir con <b>TAMCHA</b>.”</p>
   </div>
 </section>
+
+<figure class="banda rev">
+  <img src="img/fachada-dia.jpg" alt="Fachada TAMCHA Jewelry & Coffee en concreto, de día" loading="lazy">
+  <figcaption class="etiqueta">Primera flagship ✦ render conceptual</figcaption>
+</figure>
 
 <section id="unete">
   <div class="wrap">
