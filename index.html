@@ -76,6 +76,51 @@ section{position:relative;padding:clamp(90px,14vh,160px) 0}
 #roma .calle img{width:100%;max-height:56vh;object-fit:cover;display:block}
 #roma .calle figcaption{padding-top:12px}
 
+/* ---------- tienda ---------- */
+#tienda .cabeza{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap}
+#tienda h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(44px,7vw,96px);line-height:1;color:var(--hueso);margin:14px 0 8px}
+#tienda .nota-drop{font-size:12px;color:var(--hueso-dim);max-width:30em}
+#tienda .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1px;background:var(--linea);border:1px solid var(--linea);margin-top:clamp(36px,5vh,60px)}
+.prod{background:var(--negro);padding:0 0 22px;display:flex;flex-direction:column;transition:background .4s}
+.prod:hover{background:var(--negro-2)}
+.prod .ph{overflow:hidden;aspect-ratio:1;margin-bottom:18px}
+.prod .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.16,1,.3,1)}
+.prod:hover .ph img{transform:scale(1.05)}
+.prod .info{padding:0 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.prod .codigo{font-size:10px;letter-spacing:.3em;color:var(--acero);text-transform:uppercase}
+.prod h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:var(--hueso);line-height:1.1}
+.prod .mat-p{font-size:12px;color:var(--hueso-dim)}
+.prod .precio{font-size:15px;color:var(--hueso);letter-spacing:.06em;margin-top:auto;padding-top:10px}
+.prod button{margin:14px 18px 0;padding:13px 0;background:transparent;border:1px solid var(--hueso);color:var(--hueso);font-family:'Archivo',sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;cursor:pointer;transition:background .3s,color .3s}
+.prod button:hover{background:var(--hueso);color:var(--negro)}
+.prod button.ok{background:var(--hueso);color:var(--negro)}
+#tienda .empaque{margin-top:14px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--acero)}
+
+/* bolsa */
+#btn-bolsa{position:fixed;right:clamp(16px,3vw,40px);bottom:clamp(16px,3vw,36px);z-index:70;background:var(--hueso);color:var(--negro);border:0;padding:16px 26px;font-family:'Archivo',sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;cursor:pointer;display:none}
+#btn-bolsa.visible{display:block}
+#bolsa{position:fixed;top:0;right:0;bottom:0;width:min(420px,100vw);background:var(--negro-2);border-left:1px solid var(--linea);z-index:80;transform:translateX(100%);transition:transform .45s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column;padding:28px}
+#bolsa.abierta{transform:none}
+#bolsa .titulo{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+#bolsa .titulo h3{font-family:'Anton',sans-serif;font-weight:400;font-size:18px;letter-spacing:.14em;color:var(--hueso)}
+#bolsa .cerrar{background:none;border:0;color:var(--hueso-dim);font-size:22px;cursor:pointer;line-height:1}
+#bolsa .items{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:16px}
+#bolsa .item{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;border-bottom:1px solid var(--linea);padding-bottom:14px}
+#bolsa .item img{width:64px;height:64px;object-fit:cover}
+#bolsa .item .n{font-size:13px;color:var(--hueso)}
+#bolsa .item .p{font-size:12px;color:var(--hueso-dim);margin-top:2px}
+#bolsa .item .qty{display:flex;gap:8px;align-items:center;margin-top:6px}
+#bolsa .item .qty button{background:none;border:1px solid var(--linea);color:var(--hueso);width:22px;height:22px;cursor:pointer;font-size:12px}
+#bolsa .item .quitar{background:none;border:0;color:var(--acero);cursor:pointer;font-size:16px}
+#bolsa .total{border-top:1px solid var(--linea);padding-top:18px;margin-top:12px;display:flex;justify-content:space-between;font-size:14px;color:var(--hueso);letter-spacing:.1em}
+#bolsa .pedir{margin-top:18px;padding:16px 0;width:100%;background:var(--hueso);color:var(--negro);border:0;font-family:'Archivo',sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;cursor:pointer}
+#bolsa .vacio{color:var(--acero);font-size:13px;text-align:center;margin-top:40px}
+#bolsa .confirmado{text-align:center;padding:30px 10px;display:none}
+#bolsa .confirmado .chispa-g{font-size:34px;color:var(--hueso)}
+#bolsa .confirmado h4{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:var(--hueso);margin:14px 0 8px}
+#bolsa .confirmado p{font-size:13px;color:var(--hueso-dim);line-height:1.7}
+#bolsa .confirmado .folio{margin-top:14px;font-size:12px;letter-spacing:.3em;color:var(--hueso);border:1px solid var(--linea);display:inline-block;padding:10px 18px}
+
 /* ---------- header ---------- */
 header{
   position:fixed;top:0;left:0;right:0;z-index:50;
@@ -335,7 +380,7 @@ footer p{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(-
     <p class="etiqueta rev">Nuestra propuesta</p>
     <div class="grid">
       <article class="mundo rev">
-        <div class="foto"><img src="img/taza-osito-barra.jpg" alt="Vaso TAMCHA con osito coleccionable en barra de acero" loading="lazy"></div>
+        <div class="foto"><img src="img/matcha-latte.jpg" alt="Matcha latte en taza negra TAMCHA sobre barra de acero" loading="lazy"></div>
         <p class="num">01</p>
         <h3>COFFEE</h3>
         <p>Café de especialidad y matcha ceremonial. Bebidas pensadas para sorprender y conectar, servidas en un espacio que invita a quedarse.</p>
@@ -389,6 +434,23 @@ footer p{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(-
       <h3>Merchandising<span class="chispa">✦</span></h3>
       <p>Diseños exclusivos para llevar TAMCHA contigo.</p>
     </div>
+  </div>
+</section>
+
+<section id="tienda">
+  <figure class="banda rev" style="margin:0 0 clamp(50px,8vh,90px)">
+    <img src="img/hero-bodegon.jpg" alt="Anillos y cadena de plata junto a taza TAMCHA con matcha, sobre piedra volcánica" loading="lazy">
+  </figure>
+  <div class="wrap">
+    <div class="cabeza rev">
+      <div>
+        <p class="etiqueta">La tienda ✦ Drop 001</p>
+        <h2>El Drop</h2>
+      </div>
+      <p class="nota-drop">Piezas numeradas, existencias limitadas. <b style="color:var(--hueso);font-weight:400">Cada pieza llega dentro de un bote de nieve TAMCHA.</b> Pre-ordena y confirmamos talla y entrega contigo.</p>
+    </div>
+    <div class="grid" id="grid-productos"></div>
+    <p class="empaque rev">✦ Empaque firma: bote de nieve negro · tapa sellada · tarjeta de autenticidad</p>
   </div>
 </section>
 
@@ -460,6 +522,21 @@ footer p{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(-
   <p>CDMX · MMXXVI</p>
 </footer>
 
+<button id="btn-bolsa" aria-label="Abrir bolsa">Bolsa · <span id="bolsa-n">0</span></button>
+<aside id="bolsa" aria-label="Bolsa de compra">
+  <div class="titulo"><h3>TU BOLSA ✦</h3><button class="cerrar" aria-label="Cerrar bolsa">×</button></div>
+  <div class="items" id="bolsa-items"></div>
+  <p class="vacio" id="bolsa-vacio">Tu bolsa está vacía.</p>
+  <div class="confirmado" id="bolsa-confirmado">
+    <div class="chispa-g">✦</div>
+    <h4>Pre-orden recibida</h4>
+    <p id="conf-texto">Gracias. Te contactaremos para confirmar talla, pago y entrega.</p>
+    <div class="folio" id="conf-folio"></div>
+  </div>
+  <div class="total" id="bolsa-total-row"><span>Total</span><b id="bolsa-total">$0</b></div>
+  <button class="pedir" id="btn-pedir">Pre-ordenar</button>
+</aside>
+
 <script>
 // ======= CONFIG (llenar cuando existan los canales oficiales) =======
 var CONFIG = {
@@ -490,6 +567,102 @@ var CONFIG = {
     nota.textContent = 'Canales oficiales próximamente ✦ lanzamiento en preparación';
   }
 })();
+
+// ======= TIENDA (drop simulado; el pedido sale por WhatsApp si CONFIG.whatsapp existe) =======
+var PRODUCTOS = [
+  {id:'cadena-001', codigo:'TAM·001', nombre:'Cadena Barbada', mat:'Plata .925 · 12 g', precio:2190, img:'img/bote-cadena.jpg'},
+  {id:'sello-002', codigo:'TAM·002', nombre:'Anillo Sello', mat:'Acero inoxidable 316L', precio:549, img:'img/bote-anillo-acero.jpg'},
+  {id:'martillo-003', codigo:'TAM·003', nombre:'Anillo Martillado', mat:'Plata .925', precio:949, img:'img/bote-anillo-plata.jpg'},
+  {id:'eslabon-004', codigo:'TAM·004', nombre:'Pulsera Eslabón', mat:'Acero inoxidable 316L', precio:690, img:'img/linea-joyeria.jpg'},
+  {id:'onix-005', codigo:'TAM·005', nombre:'Anillo Ónix', mat:'Plata .925 · piedra ónix', precio:1190, img:'img/onix-macro.jpg'},
+  {id:'osito-001', codigo:'TAM·OSO', nombre:'Osito TAMCHA', mat:'Coleccionable · Ed. 001', precio:499, img:'img/linea-coleccionables.jpg'}
+];
+var MXN = function(n){ return '$' + n.toLocaleString('es-MX'); };
+var bolsa = {};
+try { bolsa = JSON.parse(localStorage.getItem('tamcha-bolsa') || '{}'); } catch(e){}
+
+(function pintaProductos(){
+  var g = document.getElementById('grid-productos');
+  PRODUCTOS.forEach(function(p){
+    var el = document.createElement('article');
+    el.className = 'prod rev';
+    el.innerHTML = '<div class="ph"><img loading="lazy" alt="'+p.nombre+' TAMCHA" src="'+p.img+'"></div>'+
+      '<div class="info"><span class="codigo">'+p.codigo+'</span><h3>'+p.nombre+'</h3>'+
+      '<p class="mat-p">'+p.mat+' · en bote de nieve TAMCHA</p>'+
+      '<p class="precio">'+MXN(p.precio)+' MXN</p></div>'+
+      '<button data-id="'+p.id+'">Agregar ✦</button>';
+    g.appendChild(el);
+  });
+  g.addEventListener('click', function(ev){
+    var b = ev.target.closest('button[data-id]');
+    if (!b) return;
+    bolsa[b.dataset.id] = (bolsa[b.dataset.id] || 0) + 1;
+    guarda(); pintaBolsa();
+    b.textContent = 'Agregado ✦'; b.classList.add('ok');
+    setTimeout(function(){ b.textContent = 'Agregar ✦'; b.classList.remove('ok'); }, 1200);
+  });
+})();
+
+function guarda(){ localStorage.setItem('tamcha-bolsa', JSON.stringify(bolsa)); }
+function nTotal(){ return Object.values(bolsa).reduce(function(a,b){return a+b},0); }
+function pintaBolsa(){
+  var n = nTotal();
+  document.getElementById('bolsa-n').textContent = n;
+  document.getElementById('btn-bolsa').classList.toggle('visible', n > 0);
+  var cont = document.getElementById('bolsa-items');
+  cont.innerHTML = '';
+  var total = 0;
+  Object.keys(bolsa).forEach(function(id){
+    var p = PRODUCTOS.find(function(x){return x.id===id});
+    if (!p) return;
+    total += p.precio * bolsa[id];
+    var d = document.createElement('div');
+    d.className = 'item';
+    d.innerHTML = '<img src="'+p.img+'" alt=""><div><div class="n">'+p.nombre+'</div>'+
+      '<div class="p">'+MXN(p.precio)+' · '+p.mat.split('·')[0]+'</div>'+
+      '<div class="qty"><button data-menos="'+id+'">−</button><span>'+bolsa[id]+'</span><button data-mas="'+id+'">+</button></div></div>'+
+      '<button class="quitar" data-quitar="'+id+'" aria-label="Quitar">×</button>';
+    cont.appendChild(d);
+  });
+  document.getElementById('bolsa-vacio').style.display = n ? 'none' : 'block';
+  document.getElementById('bolsa-total').textContent = MXN(total) + ' MXN';
+  document.getElementById('bolsa-total-row').style.display = n ? 'flex' : 'none';
+  document.getElementById('btn-pedir').style.display = n ? 'block' : 'none';
+}
+document.getElementById('bolsa-items').addEventListener('click', function(ev){
+  var t = ev.target;
+  if (t.dataset.mas){ bolsa[t.dataset.mas]++; }
+  else if (t.dataset.menos){ bolsa[t.dataset.menos]--; if (bolsa[t.dataset.menos] <= 0) delete bolsa[t.dataset.menos]; }
+  else if (t.dataset.quitar){ delete bolsa[t.dataset.quitar]; }
+  else return;
+  guarda(); pintaBolsa();
+});
+document.getElementById('btn-bolsa').addEventListener('click', function(){
+  document.getElementById('bolsa-confirmado').style.display = 'none';
+  document.getElementById('bolsa').classList.add('abierta');
+});
+document.querySelector('#bolsa .cerrar').addEventListener('click', function(){
+  document.getElementById('bolsa').classList.remove('abierta');
+});
+document.getElementById('btn-pedir').addEventListener('click', function(){
+  var lineas = Object.keys(bolsa).map(function(id){
+    var p = PRODUCTOS.find(function(x){return x.id===id});
+    return bolsa[id] + 'x ' + p.nombre + ' (' + MXN(p.precio) + ')';
+  });
+  var total = Object.keys(bolsa).reduce(function(a,id){
+    var p = PRODUCTOS.find(function(x){return x.id===id});
+    return a + p.precio*bolsa[id];
+  }, 0);
+  var folio = 'TAM-' + Math.random().toString(36).slice(2,7).toUpperCase();
+  if (CONFIG.whatsapp){
+    var msg = 'Pre-orden TAMCHA ✦ ' + folio + '%0A' + lineas.join('%0A') + '%0ATotal: ' + MXN(total) + ' MXN';
+    window.open('https://wa.me/' + CONFIG.whatsapp + '?text=' + msg, '_blank');
+  }
+  bolsa = {}; guarda(); pintaBolsa();
+  document.getElementById('conf-folio').textContent = 'Folio ' + folio;
+  document.getElementById('bolsa-confirmado').style.display = 'block';
+});
+pintaBolsa();
 
 // revelado al hacer scroll
 (function(){
